@@ -13,7 +13,7 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@2 #here we are utilizing an action that is been created by github
+      - uses: actions/checkout@3.5.3 #here we are utilizing an action that is been created by github
       - name: hello world
         run: echo "Hello world"
         shell: bash
