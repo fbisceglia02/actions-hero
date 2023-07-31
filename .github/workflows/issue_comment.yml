@@ -34,7 +34,7 @@ jobs:
             #   Comment but from the api call, not the action
             #   '
 
-            echo "https://api.github.com/${ORGANIZATION}/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments" 
+            echo "https://api.github.com/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments" 
 
         env:
           GITHUB_TOKEN: ${{ secrets.AGITHUB_TOKEN }}
