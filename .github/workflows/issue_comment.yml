@@ -28,11 +28,11 @@ jobs:
     steps:
       - name: "create comment with API"
         run: |
-            # gh api -X POST \
-            #   https://api.github.com/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments \
-            #   -f body='
-            #   Comment but from the api call, not the action
-            #   '
+            gh api -X POST \
+              https://api.github.com/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments \
+              -f body='
+              Comment but from the api call, not the action
+              '
 
             echo "done!" 
 
