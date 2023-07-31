@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v3.5.3
       # another step with a shell command
       - name: hello world
-        run: echo "Hello world!"
+        run: echo "Hello world 2!"
         shell: bash
 
   # another job echoing goodbte world 
@@ -27,3 +27,5 @@ jobs:
       - name: goodbye world
         run: echo "Goodbye world!"
         shell: bash
+
+ 
