@@ -1,4 +1,5 @@
-name: Hello world workflow
+name: hello world workflow
+
 
 on:
   push:
@@ -8,19 +9,21 @@ on:
     branches:
       - main
   workflow_dispatch:
-  
+
 jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.5.3 #here we are utilizing an action that is been created by github
+      - uses: actions/checkout@v3.5.3
+      # another step with a shell command
       - name: hello world
-        run: echo "Hello world"
+        run: echo "Hello world!"
         shell: bash
-  #job goodbye
+
+  # another job echoing goodbte world 
   goodbye:
     runs-on: ubuntu-latest
     steps:
       - name: goodbye world
-        run: echo "Goodbye world"
+        run: echo "Goodbye world!"
         shell: bash
