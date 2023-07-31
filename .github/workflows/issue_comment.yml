@@ -28,11 +28,14 @@ jobs:
     steps:
       - name: "create comment with API"
         run: |
-            gh api -X POST \
-              https://api.github.com/${ORGANIZATION}/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments \
-              -f body='
-              Comment but from the api call, not the action
-              '
+            # gh api -X POST \
+            #   https://api.github.com/${ORGANIZATION}/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments \
+            #   -f body='
+            #   Comment but from the api call, not the action
+            #   '
+
+            echo "https://api.github.com/${ORGANIZATION}/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments" 
+
         env:
           GITHUB_TOKEN: ${{ secrets.AGITHUB_TOKEN }}
           ORGANIZATION: ${{ github.actor }}
