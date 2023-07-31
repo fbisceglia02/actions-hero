@@ -29,12 +29,12 @@ jobs:
       - name: "create comment with API"
         run: |
             # gh api -X POST \
-            #   https://api.github.com/${ORGANIZATION}/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments \
+            #   https://api.github.com/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments \
             #   -f body='
             #   Comment but from the api call, not the action
             #   '
 
-            echo "https://api.github.com/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments" 
+            echo "done!" 
 
         env:
           GITHUB_TOKEN: ${{ secrets.AGITHUB_TOKEN }}
