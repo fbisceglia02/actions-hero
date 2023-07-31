@@ -36,7 +36,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.AGITHUB_TOKEN }}
           ORGANIZATION: ${{ github.actor }}
-          REPOSITORY: ${{ github.event.repository.name }}
+          REPOSITORY: ${{ github.repository }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
 
         #   sample
